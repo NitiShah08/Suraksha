@@ -128,14 +128,6 @@ def bag_of_words(s, words):
 
 
 config = {
-    'apiKey': "AIzaSyAoCHa8kZA8FuYUexiEpvyQsBw_YTgAZK0",
-    'authDomain': "emergencysystem-1884f.firebaseapp.com",
-    'databaseURL': "https://emergencysystem-1884f.firebaseio.com",
-    'projectId': "emergencysystem-1884f",
-    'storageBucket': "emergencysystem-1884f.appspot.com",
-    'messagingSenderId': "950571994549",
-    'appId': "1:950571994549:web:a910ec642c4c64b04a5dfc",
-    'measurementId': "G-L3DDX6WNXS"
 }
 firebase = pyrebase.initialize_app(config)
 authe = firebase.auth()
@@ -394,7 +386,7 @@ def text2(request):
         return render(request, 'home.html', {"text": responses[0], "textlang": str(f)})
 
 
-API_KEY = 'AIzaSyDc01i-w1GdP0Gzu7hryQM4g81XRZUXVc4'
+API_KEY = ''
 
 # useremail = request.session['email']
 #                     users = db.child('users').get().val()
@@ -420,7 +412,7 @@ def latlongi(request):
         # idhar apoorva ka code aayega to fnd pincode
         from geopy.geocoders import GoogleV3
 
-        geolocator = GoogleV3(api_key='AIzaSyA3W-x4zqHwfCJ2xgzLvuO1MVPlWwp_XJI')
+        geolocator = GoogleV3(api_key='')
         latlong = latitude + ',' + longitude
         locations = geolocator.reverse(latlong)
         if locations:
@@ -535,14 +527,7 @@ def get_latlong(request):
     import pyrebase
 
     config = {
-        'apiKey': "AIzaSyB6s7DSe9M6MZk7g77cMTuoqIO6d-ebKwI",
-        'authDomain': "garbage-truck-monitoring.firebaseapp.com",
-        'databaseURL': "https://garbage-truck-monitoring.firebaseio.com",
-        'projectId': "garbage-truck-monitoring",
-        'storageBucket': "garbage-truck-monitoring.appspot.com",
-        'messagingSenderId': "549306067582",
-        'appId': "1:549306067582:web:bbaeac9ec829045099c62f",
-        'measurementId': "G-X9JCRW3TR0"
+
     }
     firebase = pyrebase.initialize_app(config)
 
